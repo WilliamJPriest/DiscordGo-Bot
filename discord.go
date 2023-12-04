@@ -24,13 +24,13 @@ func main() {
 		log.Printf("Received message: %s", message.Author.ID)
 
 		log.Printf("Received message: %s", sess.State.User.ID)
-		log.Printf("Received message: %s", message.Content) // Add this line for debugging
+		log.Printf("Received message: %s", message.Content)
 	
 		if message.Content == "Hello" {
 			sess.ChannelMessageSend(message.ChannelID, "Where's Ivan?")
 		}
 		if message.Author.ID == "535525711495299073" {
-			log.Printf(message.Content) // Add this line for debugging
+			log.Printf(message.Content) 
 			sess.ChannelMessageSend(message.ChannelID, "Hi Will")
 		}
 	})
